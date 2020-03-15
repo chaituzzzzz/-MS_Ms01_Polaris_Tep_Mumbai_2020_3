@@ -34,7 +34,19 @@ curl http://faker.hook.io?property=name.findName&locale=de
       var randomEmail = faker.internet.email(); // Rusty@arne.info
       var randomCard = faker.helpers.createCard(); // random contact card containing many properties
     </script>
-
+### how to acess New category(Laptop)
+    // since we are requiring the top level of faker, load all locales by default
+    var Faker = require('./lib');
+    var faker = new Faker({ locales: require('./lib/locales') });
+    // /module['exports'] = faker;
+    count = 3
+    for(let printCount =0; printCount< count ; printCount++){
+        console.log('\n')
+        console.log(faker.laptop.model());
+        console.log(faker.laptop.fault());
+        console.log(faker.laptop.company());
+        console.log('\n')
+    }   
 ### Node.js
 
     var faker = require('faker');
@@ -42,6 +54,9 @@ curl http://faker.hook.io?property=name.findName&locale=de
     var randomName = faker.name.findName(); // Rowan Nikolaus
     var randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
     var randomCard = faker.helpers.createCard(); // random contact card containing many properties
+    console.log(faker.laptop.model()); // selects random laptop model
+    console.log(faker.laptop.fault()); // selects random laptop fault
+    console.log(faker.laptop.company()); // selects random laptop company
 
 ## API
 
@@ -230,7 +245,10 @@ This will interpolate the format string with the value of methods `name.lastName
   * directoryPath
   * filePath
   * semver
-
+* laptop
+  * model
+  * fault
+  * company
 
 ## Localization
 
