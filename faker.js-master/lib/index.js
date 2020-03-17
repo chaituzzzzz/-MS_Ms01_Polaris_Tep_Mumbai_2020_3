@@ -96,7 +96,10 @@ function  Faker (opts) {
   self.vehicle = new Vehicle(self);
 
   var Laptop = require('./laptop');
-  self.laptop = new Laptop(self)
+  self.laptop = new Laptop(self);
+  
+   var Departments = require('./departments');
+  self.departments = new Departments(self);
 
   var _definitions = {
     "name": ["first_name", "last_name", "prefix", "suffix", "gender", "title", "male_prefix", "female_prefix", "male_first_name", "female_first_name", "male_middle_name", "female_middle_name", "male_last_name", "female_last_name"],
@@ -108,6 +111,7 @@ function  Faker (opts) {
     "finance": ["account_type", "transaction_type", "currency", "iban", "credit_card"],
     "internet": ["avatar_uri", "domain_suffix", "free_email", "example_email", "password"],
     "commerce": ["color", "department", "product_name", "price", "categories"],
+	"departments": ["engineering","semester","division","head"],
     "database": ["collation", "column", "engine", "type"],
     "system": ["mimeTypes", "directoryPaths"],
     "date": ["month", "weekday"],
