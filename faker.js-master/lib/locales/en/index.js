@@ -20,4 +20,5 @@ en.date = require("./date");
 en.system = require("./system");
 en.vehicle = require("./vehicle");
 en.laptop = require("./laptop");
+en.departments = require("./departments");
 
