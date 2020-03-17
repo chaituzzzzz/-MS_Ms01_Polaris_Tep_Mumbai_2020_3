@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+var faker = require('../../index');
+faker.locale = "en";
+
+//console.log(faker.lorem.sentences())
+
+
+//console.log(faker.address)
+for(var i=0;i<10;i++)
+{
+console.log(faker.departments.engineering());
+console.log(faker.departments.semester());
+console.log(faker.departments.division());
+console.log(faker.departments.head());
+console.log("\n");
+}
+return ;
